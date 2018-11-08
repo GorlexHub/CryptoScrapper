@@ -1,0 +1,32 @@
+<section class='CTA'>
+<div style="text-align: center;">
+<br>
+<br>
+<br>
+<br>
+<br>
+<p><h2><em><strong><font color="white">Choisis ta monnaie:</font></em></strong></h2></p>
+<br>
+<form action="/">
+  <select name="currency">
+     <% @currencies_values.each do |name, value| %>
+      <option><%= name %></option>
+    <% end %>
+  </select>
+  <br><br>
+  <input class="btn btn success" type="submit">
+</form>
+
+
+<% if params[:currency].nil? %>
+<% else %>
+<br></br>
+<font color="white"><h3>$ <strong><em><%= @currencies_values["#{@currency}"] %></strong></em></h3>
+<%= params[:id] %></h2></strong>
+
+<% end %>
+<br> <br>
+
+
+</div>
+</section>
